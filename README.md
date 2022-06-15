@@ -87,7 +87,7 @@ The following languages have been used on this project:
 
   <img src="../screenshots/3.png" alt="screenshot" />
 
-  <img src="../screenshots/4.png" alt="screenshot" />
+  <img src="screenshots/4.png" alt="screenshot" />
 ## Known Bugs
 
 So far so good there are no bugs related to this project 😎
