@@ -80,7 +80,7 @@ The following languages have been used on this project:
 
 - Live link to view the project <a target="_blank" href="#">View app</a>
 
-## Some Screenshots for Api preview😎
+## Some Screenshots for AIRPORT INFO preview😎
  <img src="app/screenshots/1.png" alt="screenshot" />
 
   <img src="app/screenshots/2.png" alt="screenshot" />
