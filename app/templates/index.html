@@ -13,12 +13,26 @@
 	<meta name="description" content="">
 	
 	<!-- title -->
-	<title>FreightData</title>
+	<title>FlightData</title>
 
 </head>
 {% block content %}
 <body>
-    <h2 class="text-center">Tim</h2>
+	
+    <h2 class="text-center">{{airport}}</h2>
+	<h2 class="text-center">{{airport['iata']}}</h2>
+	<h2 class="text-center">{{airport['iciao']}}</h2>
+	<h2 class="text-center">{{airport['name']}}</h2>
+	<h2 class="text-center">{{airport['location']}}</h2>
+	<h2 class="text-center">{{airport['street_number']}}</h2>
+	<h2 class="text-center">{{airport['state']}}</h2>
+	<h2 class="text-center">{{airport['country']}}</h2>
+	<h2 class="text-center">{{airport['country_iso']}}</h2>
+	<h2 class="text-center">{{airport['phone']}}</h2>
+	<h2 class="text-center">{{airport['latitude']}}</h2>
+	<h2 class="text-center">{{airport['longitude']}}</h2>
+	<h2 class="text-center">{{airport['uct']}}</h2>
+	<h2 class="text-center"><a href="{{airport['website']}}">Website of Airport</a></h2>
 </body>
 </html>
 	
