@@ -14,27 +14,133 @@
 	
 	<!-- title -->
 	<title>FlightData</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 {% block content %}
 <body>
-	
-    <h2 class="text-center">{{airport}}</h2>
-	<h2 class="text-center">{{airport['iata']}}</h2>
-	<h2 class="text-center">{{airport['iciao']}}</h2>
-	<h2 class="text-center">{{airport['name']}}</h2>
-	<h2 class="text-center">{{airport['location']}}</h2>
-	<h2 class="text-center">{{airport['street_number']}}</h2>
-	<h2 class="text-center">{{airport['state']}}</h2>
-	<h2 class="text-center">{{airport['country']}}</h2>
-	<h2 class="text-center">{{airport['country_iso']}}</h2>
-	<h2 class="text-center">{{airport['phone']}}</h2>
-	<h2 class="text-center">{{airport['latitude']}}</h2>
-	<h2 class="text-center">{{airport['longitude']}}</h2>
-	<h2 class="text-center">{{airport['uct']}}</h2>
-	<h2 class="text-center"><a href="{{airport['website']}}">Website of Airport</a></h2>
+	<div class="wrap">
+   <h1>FLIGHT INFORMATION</h1>
+   
+
+
+   <div class="row">
+	   <div class="col">
+		<h4 class="text-center">IATA: <span style="color: white;">{{airport['iata']}}</span></h4>
+		<h4 class="text-center">ICIAO: <span>{{airport['iciao']}}</span></h4>
+		<h4 class="text-center">AIRPORT NAME: <span style="color: white;">{{airport['name']}}</span></h4>
+		<h4 class="text-center">LOCATION: <span style="color: white;">{{airport['location']}}</span></h2>
+		<h4 class="text-center">STREET: <span style="color: white;">{{airport['street_number']}}</span></h4>
+		<h4 class="text-center">STATE: <span style="color: white;">{{airport['state']}}</span></h4>
+		
+	   </div>
+	   <div class="col">
+		<h4 class="text-center">COUNTRY: <span style="color: white;">{{airport['country']}}</span></h4>
+		<h4 class="text-center">ISO: <span style="color: white;">{{airport['country_iso']}}</span></h4>
+		<h4 class="text-center">PHONE: <span style="color: white;">{{airport['phone']}}</span></h4>
+		<h4 class="text-center">LATITUDE: <span style="color: white;">{{airport['latitude']}}</span></h4>
+		<h4 class="text-center">LONGITUDE: <span style="color: white;">{{airport['longitude']}}</span></h4>
+		<h4 class="text-center">UCT: <span style="color: white;">{{airport['uct']}}</span></h2>
+		<h4 class="text-center"><a href="{{airport['website']}}" class=" text-center btn btn-info btn-lg">
+			<span class="glyphicon glyphicon-plane"></span>Airport Website
+		  </a></h4>
+         
+	   </div>
+   </div>
+   <h5 class="text-center" style="color: white;">Multiple airports, runways, two successful landings, we are simply mimicking what the computer already told us.</h5>
+    <h6 class="text-center" style="color: white;">DEVELOPER TIM&#128525;</h6>
+</div>
+
+
+    <!-- <h2 class="text-center">{{airport}}</h2> -->
+
+	<!-- <form class="row-md-2 valid-form" id="form" method="POST">
+		<fieldset>
+		  <legend>INPUT IATA CODE FOR AIRPORT. <br>
+			 
+			</legend>
+		  Month:<input class="row" type="text" placeholder="MonthInFull-1stLetterIncaps" id="month">
+		</fieldset>
+		<br>
+		<input type="submit" value="Submit" id="submitButton" class="btn btn-primary" onclick="generateName(); return false"/>
+	  </form>
+
+	<h2 class="text-center1 mt-1" id="result">RESULTS</h2>
 </body>
-</html>
+<script src="../static/file.js"></script> -->
+<style>
+	html,body {
+  width: 100%;
+  min-height: 100%;
+  overflow:hidden;
+  min-height: 99vh;
+}
+
+body {
+     background: linear-gradient(90deg,#FFFF00 6%,#FFA500 25%,#F14444 45%,#D53567 55%,#9A109A 94%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap {
+  position: relative;
+}
+.col {
+	border: .3em solid white;
+    margin: 2em;
+	border-radius: 10px;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+h1 {
+    font-family: Arial;
+    color:  #FFF;
+    font-size: 90px;
+    padding: 20px 30px;
+    text-shadow: 2px 2px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+}
+
+.main {
+    background: rgba(255,255,255,0.4);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    top: 11px;
+    left: 280px;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    z-index: 4;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.drop {
+   background: rgba(255,255,255,0.4);
+   border-radius: 10px;
+   border: 1px solid rgba(255,255,255,0.2);
+   position: absolute;
+   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+   display: block;
+   margin: 0 auto;
+}
+
+
+</style>
+</html> 
 	
 	<!--PreLoader-->
 
